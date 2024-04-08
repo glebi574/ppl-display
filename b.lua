@@ -2,7 +2,7 @@ require'/dynamic/p.lua'
 meshes = {}
 ti(meshes, {vertexes = {}, segments = {}})
 v = {}
-for i = 0, bli do
+for i = bli, 0, -1 do
   ti(v, {i * psi})
 end
 for i = 1, 2 ^ bli - 1 do

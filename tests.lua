@@ -34,11 +34,14 @@ function test_display()
   
   e = wi * hi
   
+  gx = 0fx
+  gy = 0fx
+  
   g = {}
   
   function spec(d)
     sm(d, b, g[d])
-    sp(d, (wi + d - 1) % wi * ss, to_fx((d - 1) // wi) * ps)
+    sp(d, gx + (wi + d - 1) % wi * ss, gy - to_fx((d - 1) // wi) * ps)
   end
   
   function create_screen(x, y) -- creates screen ; (x; y) - top left corner and (0; 0) coordinate of screen
@@ -47,6 +50,7 @@ function test_display()
       esc(id, spec)
       ti(g, 0)
     end
+    gx, gy = x, y
   end
   
   function set_strip(x, y, v)
@@ -70,7 +74,7 @@ function test_display()
   camera_y = 20fx + h * ps / 2fx
   camera_distance = 300fx
   
-  create_screen(0fx, 0fx)
+  create_screen(0fx, h * ps)
   
   load_uncompressed'example'
   
