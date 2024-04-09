@@ -53,7 +53,7 @@ pewpew.configure_player(0, {camera_distance = camera_distance})
 function mod_camera_distance()
   local _, _, sa, sd = pewpew.get_player_inputs(0)
   if sd then
-    local sin, cos = fmath.sincos(sa)
+    local sin = fmath.sincos(sa)
     camera_distance = camera_distance + sin * sd * 10fx
     pewpew.configure_player(0, {camera_distance = camera_distance})
   end

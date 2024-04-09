@@ -1,4 +1,4 @@
-require'/dynamic/p.lua'
+require'/dynamic/param.lua'
 meshes = {}
 ti(meshes, {vertexes = {}, segments = {}})
 v = {}
